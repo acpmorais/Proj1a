@@ -26,13 +26,13 @@ int main()
     f = fopen("tempo.txt", "w");
 
     for(z=0;z<1024;z++){
-        start_t = clock();
         for(i=0;i<1024;i++){
             for(j=0;j<100;j++){
                 m[i][j] = rand() % 1000;
             }
         }
 
+        start_t = clock();
         for(i=0;i<1024;i++){
             insertionSort(m[i], 100);
         }
