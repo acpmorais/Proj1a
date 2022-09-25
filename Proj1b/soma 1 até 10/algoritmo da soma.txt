@@ -1,0 +1,25 @@
+code[ 0].f = INT; code[ 0].l = 0; code[ 0].a = 6;
+code[ 1].f = LIT; code[ 1].l = 0; code[ 1].a = 0; //soma
+code[ 2].f = STO; code[ 2].l = 0; code[ 2].a = 3;
+code[ 3].f = LIT; code[ 3].l = 0; code[ 3].a = 1; //cont
+code[ 4].f = STO; code[ 4].l = 0; code[ 4].a = 4;
+code[ 5].f = LIT; code[ 5].l = 0; code[ 5].a = 11; //limite
+code[ 6].f = STO; code[ 6].l = 0; code[ 6].a = 5;
+code[ 7].f = LOD; code[ 7].l = 0; code[ 7].a = 3; //carrega soma
+code[ 8].f = LOD; code[ 8].l = 0; code[ 8].a = 4; //carrega cont
+code[ 9].f = OPR; code[ 9].l = 0; code[ 9].a = 2; //soma+cont
+code[ 10].f = STO; code[ 10].l = 0; code[ 10].a = 3;
+code[ 11].f = LOD; code[ 11].l = 0; code[ 11].a = 5; //carrega limite
+code[ 12].f = LOD; code[ 12].l = 0; code[ 12].a = 4; //carrega cont
+code[ 13].f = OPR; code[ 13].l = 0; code[ 13].a = 3; //limite-cont
+code[ 14].f = JPC; code[ 14].l = 0; code[ 14].a = 20; //vai para o final
+code[ 15].f = LOD; code[ 15].l = 0; code[ 15].a = 4;  //carrega cont
+code[ 16].f = LIT; code[ 16].l = 0; code[ 16].a = 1; //1
+code[ 17].f = OPR; code[ 17].l = 0; code[ 17].a = 2; //cont+1
+code[ 18].f = STO; code[ 18].l = 0; code[ 18].a = 4;
+code[ 19].f = JMP; code[ 19].l = 0; code[ 19].a = 7; //vai para 7
+code[ 20].f = OPR; code[ 20].l = 0; code[ 20].a = 0; 
+
+
+obs.: o limite é 11 porque no código do interpretador de p-code a condição para o JPC é s[t]=1 e o contador começa em 1, então para que o loop 
+funcionasse corretamente o limite tem que ser 11 para que sejam realizadas as 10 iterações.
