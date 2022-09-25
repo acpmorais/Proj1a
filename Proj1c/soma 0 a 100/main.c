@@ -200,7 +200,7 @@ int main(){
     code[ 3].f = LIT; code[ 3].l = 0; code[ 3].a = 0; //cont
     code[ 4].f = STO; code[ 4].l = 0; code[ 4].a = 4;
     code[ 5].f = LIT; code[ 5].l = 0; code[ 5].a = 101; //limite
-//obs.: o limite é 101 porque a condição para o JPC é s[t]=1, então para que o loop funcione corretamente o limite tem que ser 11 para que sejam realizadas as 100 iterações.
+//obs.: o limite é 101 porque a condição para o JPC é s[t]=1, então para que o loop funcione corretamente o limite tem que ser 101 para que sejam realizadas as 100 iterações.
     code[ 6].f = STO; code[ 6].l = 0; code[ 6].a = 5;
     code[ 7].f = LOD; code[ 7].l = 0; code[ 7].a = 3; //carrega soma
     code[ 8].f = LOD; code[ 8].l = 0; code[ 8].a = 4; //carrega cont
